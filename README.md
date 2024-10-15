@@ -1,64 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Dashboard Mahasiswa
 
-## About Laravel
+Proyek ini adalah sebuah Dashboard Mahasiswa yang dirancang untuk mengelola data mahasiswa dan program studi (prodi) dalam sistem yang terintegrasi. Aplikasi ini memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada dua tabel yang saling berhubungan, yaitu tabel mahasiswa dan tabel prodi.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About 
+## Skema Database
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Skema database proyek ini terdiri dari dua tabel utama:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. **Tabel `mahasiswa`**: Menyimpan informasi tentang mahasiswa.
+   - `id`: Primary key, auto-increment
+   - `nim`: String, nim mahasiswa
+   - `name`: String, nama mahasiswa
+   - `whatsapp`: String, whatsapp mahasiswa
+   - `prodi_id`: Foreign key, merujuk ke tabel `prodi`
 
-## Learning Laravel
+2. **Tabel `prodi`**: Menyimpan informasi tentang program studi.
+   - `id`: Primary key, auto-increment
+   - `nama`: String, nama program studi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Hubungan antar tabel:
+- Tabel `mahasiswa` memiliki kolom `prodi_id` yang merujuk ke `id` di tabel `prodi`, membentuk relasi one-to-many (satu prodi dapat memiliki banyak mahasiswa).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Gambar Skema Database
 
-## Laravel Sponsors
+![Skema Database](assets/img/skemadb.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Features
 
-### Premium Partners
+- **Manajemen Data Mahasiswa**: Pengguna dapat menambahkan, melihat, mengedit, dan menghapus data mahasiswa. Setiap mahasiswa dapat dihubungkan dengan program studi yang relevan.
+- **Manajemen Data Program Studi**: Pengguna juga dapat mengelola data program studi, termasuk menambahkan program baru, memperbarui informasi yang ada, dan menghapus program studi yang tidak lagi digunakan.
+- **Relasi Antara Tabel**: Terdapat relasi yang jelas antara tabel mahasiswa dan tabel prodi, sehingga pengguna dapat dengan mudah melihat program studi yang diambil oleh setiap mahasiswa.e
+- **Validasi Input**: Setiap data yang dimasukkan ke dalam sistem akan melalui proses validasi untuk memastikan bahwa data yang disimpan adalah akurat dan konsisten.
+- **Antarmuka Pengguna yang Intuitif**: Dashboard dilengkapi dengan antarmuka pengguna yang ramah, membuat navigasi antara fitur-fitur menjadi mudah dan efisien.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## Requirements
+- Laravel 8
+- php 7.3 - 8.1
+- Composer
+- Database MySQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Installation
 
-## Code of Conduct
+1. Ikuti langkah-langkah berikut untuk menginstal proyek ini:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+  git clone https://github.com/RahmatPrakoso276/crud-mhs-dot.git
+```
+2. Masuk ke direktori proyek
+```
+cd repo-name
+```
 
-## Security Vulnerabilities
+3. Install dependensi
+```
+composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4. Salin file .env.example ke aplikasi
+```
+cp .env.example .env
+```
+5. Generate key
+```
+php artisan key:generate
+```
+6. Konfigurasikan .env sesuaikan dengan settingan database anda
+7. Jalankan Migrasi 
+```
+php artisan migrate
+```
+8. Jalankan aplikasi
+```
+php artisan serve
+```
+    
