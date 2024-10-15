@@ -24,10 +24,8 @@ Hubungan antar tabel:
 
 ## Gambar Skema Database
 
-![Skema Database](public/assets/img/skemadb.png)
-
 <p align="center">
-  <img src="public/assets/img/skemadb.png" alt="Description" style="width:100%;">
+  <img src="public/assets/img/skemadb.png" alt="Skema Database" style="width:100%;">
 </p>
 
 ## Features
@@ -79,4 +77,13 @@ php artisan migrate
 ```
 php artisan serve
 ```
+
+
+## Contributing
+
+Contributions are always welcome!
+
+Anda dapat berkontribusi dalam menambahkan tampilan laman dashboard salah satunya jumlah mahasiswa perprodi dalam bentuk chart!
+
+
     
