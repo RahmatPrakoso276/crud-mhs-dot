@@ -24,7 +24,7 @@ Hubungan antar tabel:
 
 ## Gambar Skema Database
 
-![Skema Database](assets/img/skemadb.png)
+![Skema Database](public/assets/img/skemadb.png)
 
 ## Features
 
