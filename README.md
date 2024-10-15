@@ -26,6 +26,10 @@ Hubungan antar tabel:
 
 ![Skema Database](public/assets/img/skemadb.png)
 
+<p align="center">
+  <img src="public/assets/img/skemadb.png" alt="Description" style="width:100%;">
+</p>
+
 ## Features
 
 - **Manajemen Data Mahasiswa**: Pengguna dapat menambahkan, melihat, mengedit, dan menghapus data mahasiswa. Setiap mahasiswa dapat dihubungkan dengan program studi yang relevan.
